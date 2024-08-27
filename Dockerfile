@@ -24,6 +24,9 @@ RUN --mount=type=bind,source=package.json,target=package.json \
     --mount=type=cache,target=/root/.npm \
     npm i 
 
+# Create uploads directory with the correct permissions
+RUN mkdir -p /usr/src/app/uploads && chown -R node:node /usr/src/app/uploads
+
 # Run the application as a non-root user.
 USER node
 
