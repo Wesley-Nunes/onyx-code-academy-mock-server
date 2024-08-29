@@ -5,7 +5,7 @@ import 'dotenv/config';
 
 const app = express();
 const upload = multer({ dest: 'uploads/' });
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 
 // Mock data
 let videos = [];
